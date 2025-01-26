@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>KunalTyagi – Personal Website</title>
+    <meta
+      name="description"
+      content="My name is Kunal Tyagi, I’m a digital designer and full stack software developer. I have a passion for all things technology and design, from software engineering & machine learning to UI/UX & 3D graphics."
+    />
+
+    <link rel="icon" type="image/png" href="/icon/32x32.png" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/180x180.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="KunalTyagi – Personal Website"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#f6d4b1" />
+
+    <meta property="og:title" content="Kunal Tyagi – Personal Website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://edh.dev/" />
+    <meta property="og:image" content="https://edh.dev/icon/og-img1.png" />
+    <meta
+      name="og:description"
+      content="My name is Kunal Tyagi, I’m a digital designer and full stack software developer. I have a passion for all things technology and design, from software engineering & machine learning to UI/UX & 3D graphics."
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+
+  <body>
+    <div id="home"></div>
+
+    <canvas class="webgl"></canvas>
+
+    <div id="hero-backup">
+      <h3>Hi there, I’m</h3>
+      <h1>Kunal</h1>
+      <ul>
+        <li>Software Developer</li>
+        <li>Digital Designer</li>
+      </ul>
+    </div>
+
+    <nav>
+      <div class="menu-btn">
+        <button class="btn" onclick="toggleMenu()">
+          <svg width="16" height="16">
+            <rect class="st0" width="16" height="3.2" />
+            <rect y="6.4" class="st0" width="16" height="3.2" />
+            <rect y="12.8" class="st0" width="16" height="3.2" />
+          </svg>
+        </button>
+        <div style="display: flex">
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/tykunal/"
+            target="_blank"
+          >
+            <svg width="16" height="16">
+              <path
+                d="M0.1,2c0-1,0.8-1.8,1.9-1.8c1,0,1.8,0.9,1.8,1.8c0,1-0.8,1.9-1.8,1.9C0.9,3.9,0.1,3.1,0.1,2z M0.1,5h3.7v9.8
+                H0.1V5z"
+              />
+              <path
+                d="M15.9,8.5v6.2h-3.5V9.4c0-0.9-0.6-1.6-1.5-1.6c-0.8,0-1.4,0.6-1.4,1.5v5.5H5.8V5h3.7v1
+                c0.6-0.7,1.6-1.2,2.8-1.2C14.4,4.7,15.9,6.3,15.9,8.5z"
+              />
+            </svg>
+          </a>
+          <a class="btn" href="https:/x.com/tykunal/" target="_blank">
+            <svg
+              viewBox="0 0 100 100"
+              width="16"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 10 L50 50 L90 10 L100 20 L60 50 L100 80 L90 90 L50 60 L10 90 L0 80 L40 50 L0 20 Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a class="btn" href="https://github.com/tykunal/" target="_blank">
+            <svg width="16" height="16">
+              <path
+                d="M10.6,12.9c0-1-0.3-1.6-0.7-2c2.4-0.3,4.9-1.1,4.9-5.2c0-1.1-0.4-2.1-1.1-2.9c0.1-0.3,0.5-1.3-0.1-2.8
+                c0,0-0.9-0.3-3,1.1c-1.7-0.5-3.6-0.5-5.4,0c-2-1.4-3-1.1-3-1.1C1.6,1.4,2,2.5,2.1,2.8C1.4,3.5,1,4.6,1,5.6c0,4.1,2.5,5,4.9,5.3
+                c-0.4,0.4-0.6,0.9-0.7,1.4c-0.6,0.3-2.2,0.7-3.1-0.9c0,0-0.6-1-1.6-1.1c0,0-1.1,0-0.1,0.7c0,0,0.7,0.3,1.1,1.6c0,0,0.6,2.1,3.6,1.5
+                c0,0.9,0,1.8,0,1.8h5.3C10.6,15.9,10.6,14.4,10.6,12.9z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-body" onclick="closeMenu()">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#aboutMe" onclick="closeMenu()">About</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </div>
+
+      <div id="tip-scroll">Scroll &#8595;</div>
+    </nav>
+
+    <main>
+      <section>
+        <h1 id="aboutMe">Hi there</h1>
+        <p>
+          My name is Kunal Tyagi, I’m a digital designer and full stack software
+          developer. I have a passion for all things technology and design, from
+          software engineering & machine learning to UI/UX & 3D graphics.
+        </p>
+        <p>
+          I love diving into algorithms and solving tricky challenges just as
+          much as I enjoy creating sleek, functional web apps.
+        </p>
+
+        <p>
+          Below are details of some of the projects I have developed throughout
+          my coding journey.
+        </p>
+      </section>
+
+      <section>
+        <h1 id="projects">Projects</h1>
+        <hr />
+        <h2>Learnify</h2>
+        <h3>2025-26</h3>
+        <ul class="skills">
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>Socket.io</li>
+          <li>Mongodb</li>
+          <li>NextAuth v5</li>
+          <li>Web Dev</li>
+        </ul>
+        <p>
+          Learnify is a standout project I developed during my internship at
+          MangosOrange Group. It’s a comprehensive platform that empowers users
+          to purchase courses and earn rewards upon successfully completing
+          them. The platform enhances learning engagement by incorporating
+          assignments and coding tests for skill development.
+        </p>
+        <!-- <p><a href="https://github.com/tykunal/learnify">Learnify</a></p> -->
+        <br />
+        <div class="image">
+          <img
+            src="/src/img/LearnifyImg.png"
+            width="100%"
+            alt="Learnify Screenshot"
+            loading="lazy"
+            style="aspect-ratio: 2443 / 1576"
+          />
+        </div>
+        <hr />
+        <h2>Connectify</h2>
+        <h3>2024</h3>
+        <ul class="skills">
+          <li>MERN</li>
+          <li>Redux</li>
+          <li>Chakra Ui</li>
+          <li>Socket.io</li>
+          <li>Web Dev</li>
+        </ul>
+        <p>
+          A social networking platform designed to foster meaningful connections
+          and enhance community engagement. Users can interact seamlessly
+          through Real-time Messaging, Personalized Feed, Post liking ,
+          commenting, sharing etc.
+        </p>
+        <p><a href="https://connectify-0vxo.onrender.com/">Connectify</a></p>
+        <div class="image">
+          <img
+            src="/src/img/ConnectifyImg.png"
+            width="100%"
+            alt="Connectify Screenshot"
+            loading="lazy"
+            style="aspect-ratio: 2443 / 1576"
+          />
+        </div>
+        <hr />
+
+        <h2>Threejs works</h2>
+        <h3>2025</h3>
+        <ul class="skills">
+          <li>Threejs</li>
+          <li>Design</li>
+          <li>3D modeling</li>
+          <li>UI/UX</li>
+          <li>Web Dev</li>
+        </ul>
+        <p>
+          Most recently, during my semester break, I delved into the fascinating world of 3D modeling 
+          and explored the capabilities of Three.js. Leveraging this powerful library, I developed
+          interactive 3D elements and seamlessly integrated them into websites, enhancing
+          user engagement and visual appeal.
+          This experience allowed me to deepen my understanding of 3D graphics and their applications 
+          in modern web development.
+        </p>
+        <div class="image">
+          <video width="100%" loop autoplay>
+            <source src="/src/img/threejsWorksVideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <hr />
+
+        <h2>Help Desk</h2>
+        <h3>2024</h3>
+        <ul class="skills">
+          <li>Flask</li>
+          <li>Python</li>
+          <li>Mongodb</li>
+          <li>Machine Learning</li>
+          <li>Freelance</li>
+          <li>Web Dev</li>
+        </ul>
+        <p>An Intelligent Query-Handling Bot.</p>
+        <p>
+          This intelligent bot streamlines query handling by identifying users
+          and their messages, classifying problems, and providing instant
+          solutions using the Bag of Words technique. If no solution exists, it
+          raises a ticket, provides a ticket number, and allows users to check
+          its status. Additionally, an admin panel, accessible with a specific
+          user ID, enables seamless ticket management for administrators.
+        </p>
+        <!-- <button
+          class="collapse-btn btn"
+          collapsed="true"
+          onclick="this.setAttribute('collapsed', this.getAttribute('collapsed') === 'true'? 'false' : 'true')"
+        >
+          more...
+        </button> -->
+        <br />
+
+        <div class="image">
+          <img
+            src="/src/img/HelpDeskImg.png"
+            width="100%"
+            alt="HelpDesk screenshot"
+            style="aspect-ratio: 1330 / 924"
+          />
+        </div>
+        <hr />
+
+        <h2>Cyberfiction</h2>
+        <h3>2024</h3>
+        <ul class="skills">
+          <li>Html, Css, Js</li>
+          <li>Gsap</li>
+          <li>Locomotive</li>
+          <li>Canvas</li>
+          <li>3D Animation</li>
+        </ul>
+        <p>
+          While learning advanced web animations, I designed and developed an
+          interactive website that integrates modern animation libraries like
+          GSAP and Locomotive Scroll. The project features smooth scrolling,
+          dynamic text animations, and responsive layouts, showcasing creative
+          transitions and user engagement.
+        </p>
+        <div class="image">
+          <video width="100%" loop autoplay>
+            <source src="/src/img/CyberFictionEdited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <hr />
+      </section>
+
+      <section>
+        <h1 id="contact">Contact</h1>
+        <p style="text-align: center">
+          Reach out via the form below or on
+          <a href="https://www.linkedin.com/in/tykunal/">
+            <u><b>LinkedIn</b></u>
+          </a>
+        </p>
+        <form
+          action="https://formspree.io/f/xdkaaevj"
+          method="POST"
+          onsubmit="handleClick(event)"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%; /* Default to full width */
+            max-width: 680px; /* Limit max width for large screens */
+            margin: auto;
+            padding: 16px; /* Add padding to prevent touching edges */
+            box-sizing: border-box; /* Ensure padding does not overflow */
+          "
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+            style="
+              width: 100%; /* Default width */
+              padding: 8px;
+              border: dashed 1px var(--color);
+              box-shadow: 1px 1px 0px #f6d4b1,
+                4px 4px 0px rgba(82, 82, 82, 0.25);
+              font-family: 'chill', sans-serif;
+            "
+          />
+          <input
+            type="email"
+            id="email"
+            name="_replyto"
+            placeholder="Your Email"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: dashed 1px var(--color);
+              box-shadow: 1px 1px 0px #f6d4b1,
+                4px 4px 0px rgba(82, 82, 82, 0.25);
+              font-family: 'chill', sans-serif;
+            "
+          />
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: dashed 1px var(--color);
+              box-shadow: 1px 1px 0px #f6d4b1,
+                4px 4px 0px rgba(82, 82, 82, 0.25);
+              font-family: 'chill', sans-serif;
+              resize: none;
+            "
+          ></textarea>
+          <button
+            type="submit"
+            class="btn"
+            style="margin-top: 16px; text-align: center; padding: 10px 20px"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <input type="text" id="textarea" readonly />
+    <div id="loading">
+      <h2>Booting...</h2>
+      <div id="loading-bar">
+        <div id="loading-bar-progress"></div>
+      </div>
+      <div id="loading-items">Starting...</div>
+    </div>
+    <footer>
+      <div>COPYRIGHT © 2025-2026 Kunal Tyagi.</div>
+    </footer>
+    <script>
+      function handleClick(event) {
+        event.preventDefault();
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      }
+
+      function closeMenu() {
+        document.getElementsByTagName("nav")[0].classList.remove(["active"]);
+      }
+
+      function toggleMenu() {
+        const nav = document.getElementsByTagName("nav")[0];
+        if (nav.classList.contains("active")) {
+          nav.classList.remove(["active"]);
+        } else {
+          nav.classList.add("active");
+        }
+      }
+    </script>
+    <script
+      fetchpriority="high"
+      src="https://cdn-ts.netlify.app/webgl-helper@3.0.11/webgl-helper.min.js"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EDNKHGV4HB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EDNKHGV4HB");
+      gtag("event", "origin", { name: window.origin });
+    </script>
+  </body>
+</html>
