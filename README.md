@@ -7,7 +7,7 @@
 - A **Markdown interpreter and renderer**.  
 - A custom-built **text layout engine** for rendering text dynamically.  
 
-![Preview of the website](https://kunal.dev/icon/og-img1.png)
+![Preview of the website](https://tykunal.pages.dev/icon/display.png)
 
 ## Features at a Glance  
 Retro-Web combines the elegance of 3D design with functional components to provide a memorable user experience, seamlessly blending art and technology.
