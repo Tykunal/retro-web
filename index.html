@@ -28,14 +28,25 @@
 
     <meta property="og:title" content="Kunal Tyagi – Personal Website" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://edh.dev/" />
-    <meta property="og:image" content="https://edh.dev/icon/og-img1.png" />
+    <meta property="og:url" content="https://tykunal.pages.dev/" />
+    <meta
+      property="og:image"
+      content="https://tykunal.pages.dev/icon/display.png"
+    />
     <meta
       name="og:description"
       content="My name is Kunal Tyagi, I’m a digital designer and full stack software developer. I have a passion for all things technology and design, from software engineering & machine learning to UI/UX & 3D graphics."
     />
     <link rel="manifest" href="/manifest.json" />
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+      emailjs.init("BQAhi_zV0kTjZhVgI");
+    </script>
+    
   </head>
 
   <body>
@@ -202,12 +213,13 @@
           <li>Web Dev</li>
         </ul>
         <p>
-          Most recently, during my semester break, I delved into the fascinating world of 3D modeling 
-          and explored the capabilities of Three.js. Leveraging this powerful library, I developed
-          interactive 3D elements and seamlessly integrated them into websites, enhancing
-          user engagement and visual appeal.
-          This experience allowed me to deepen my understanding of 3D graphics and their applications 
-          in modern web development.
+          Most recently, during my semester break, I delved into the fascinating
+          world of 3D modeling and explored the capabilities of Three.js.
+          Leveraging this powerful library, I developed interactive 3D elements
+          and seamlessly integrated them into websites, enhancing user
+          engagement and visual appeal. This experience allowed me to deepen my
+          understanding of 3D graphics and their applications in modern web
+          development.
         </p>
         <div class="image">
           <video width="100%" controls loop autoplay>
@@ -289,10 +301,9 @@
           </a>
         </p>
         <form
-          action="mailto:kunaltyagi00000@gmail.com"
-          enctype="text/plain"
+          id="contact-form"
           method="POST"
-          onsubmit="handleClick(event)"
+          onsubmit="sendMail(event)"
           style="
             display: flex;
             flex-direction: column;
@@ -307,7 +318,7 @@
         >
           <input
             type="text"
-            name="name"
+            name="user_name"
             id="name"
             placeholder="Your Name"
             required
@@ -323,7 +334,7 @@
           <input
             type="email"
             id="email"
-            name="_replyto"
+            name="user_email"
             placeholder="Your Email"
             required
             style="
@@ -374,12 +385,33 @@
       <div>COPYRIGHT © 2025-2026 Kunal Tyagi.</div>
     </footer>
     <script>
-      function handleClick(event) {
+      function sendMail(event) {
         event.preventDefault();
+        const templateParams = {
+          user_name: document.getElementById("name").value,
+          user_email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
-      }
+        emailjs
+          .send("service_pakm9qq", "template_tnx5gyh", templateParams)
+          .then(
+            function (response) {
+              console.log(
+                "Email sent successfully!",
+                response.status,
+                response.text
+              );
+              alert("Your message has been sent!");
+            },
+            function (error) {
+              console.log("Failed to send email.", error);
+              alert("Failed to send message.");
+            }
+          );
+      };
 
       function closeMenu() {
         document.getElementsByTagName("nav")[0].classList.remove(["active"]);
