@@ -46,7 +46,6 @@
     <script>
       emailjs.init("BQAhi_zV0kTjZhVgI");
     </script>
-    
   </head>
 
   <body>
@@ -369,6 +368,7 @@
           >
             Send Message
           </button>
+          <div id="messageBox" class="hidden"></div>
         </form>
       </section>
     </main>
@@ -404,14 +404,28 @@
                 response.status,
                 response.text
               );
-              alert("Your message has been sent!");
+              showMessage("Your message has been sent!", "success");
             },
             function (error) {
               console.log("Failed to send email.", error);
-              alert("Failed to send message.");
+              showMessage("Failed to send message.", "error");
             }
           );
-      };
+      }
+      function showMessage(message, type = "info") {
+        const messageBox = document.getElementById("messageBox");
+        messageBox.textContent = message;
+        messageBox.className = type;
+        messageBox.style.opacity = "1";
+        messageBox.style.display = "inline-block";
+
+        setTimeout(() => {
+          messageBox.style.opacity = "0";
+          setTimeout(() => {
+            messageBox.style.display = "none";
+          }, 500);
+        }, 3000);
+      }
 
       function closeMenu() {
         document.getElementsByTagName("nav")[0].classList.remove(["active"]);
