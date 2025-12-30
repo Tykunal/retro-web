@@ -8,7 +8,7 @@
 
 #  Hi there,
 #  *I'm Kunal*
-#  -Creative Developer
+#  -Software Developer
 ##     — B. tech Graduate from AKTU
 ##
 ###   *Scroll* or type "help" to get started
