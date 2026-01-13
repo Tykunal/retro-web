@@ -444,3 +444,8 @@ nav.active .dropdown-menu {
   color: #1dd1a1;
   border-color: #1dd1a1;
 }
+
+.badge-freelance {
+  color: rgb(13, 143, 230);
+  border-color: rgb(13, 143, 230);
+}

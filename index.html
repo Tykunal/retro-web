@@ -202,7 +202,9 @@
           <hr />
           <h2>Learnify</h2>
           <h3>2025-26</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-org">Organization</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-org">Organization</span>
+          </div>
           <ul class="skills">
             <li>Next.js</li>
             <li>TypeScript</li>
@@ -233,7 +235,9 @@
           <hr />
           <h2>Connectify</h2>
           <h3>2024</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-personal">Personal</span>
+          </div>
           <ul class="skills">
             <li>MERN</li>
             <li>Redux</li>
@@ -261,7 +265,9 @@
 
           <h2>Threejs works</h2>
           <h3>2025</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-personal">Personal</span>
+          </div>
           <ul class="skills">
             <li>Threejs</li>
             <li>Design</li>
@@ -288,7 +294,9 @@
 
           <h2>Help Desk</h2>
           <h3>2024</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-freelance">Freelance</span>
+          </div>
           <ul class="skills">
             <li>Flask</li>
             <li>Python</li>
@@ -328,7 +336,9 @@
 
           <h2>Cyberfiction</h2>
           <h3>2024</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-personal">Personal</span>
+          </div>
           <ul class="skills">
             <li>Html, Css, Js</li>
             <li>Gsap</li>
@@ -355,7 +365,9 @@
           <hr />
           <h2>Beyond8 EcoSystem</h2>
           <h3>2025</h3>
-          <div style="margin-bottom: 10px"><span class="badge badge-org">Organization</span></div>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-org">Organization</span>
+          </div>
           <ul class="skills">
             <li>React Native</li>
             <li>FCM</li>
@@ -382,6 +394,45 @@
             while collaborating closely with cross-functional teams and
             contributing 70+ production code commits.
           </p>
+          <div class="image">
+            <img
+              src="/src/img/Beyond8Ecosystem.png"
+              width="100%"
+              alt="Beyond8 Ecosystem Screens"
+              style="aspect-ratio: 1330 / 924"
+            />
+          </div>
+
+          <hr />
+          <h2>Deliverables</h2>
+          <h3>2025</h3>
+          <div style="margin-bottom: 10px">
+            <span class="badge badge-freelance">Freelance</span>
+          </div>
+          <ul class="skills">
+            <li>React Native</li>
+            <li>Sentry</li>
+            <li>Stripe</li>
+            <li>Postgres</li>
+            <li>Redis</li>
+          </ul>
+          <p>
+            A freelance-built mobile platform where I handled everything from
+            UI/UX design to branding assets and flyers for the organization. The
+            app was developed using React Native and includes Stripe-powered
+            payments, Sentry-based error tracking, and Redis caching to
+            efficiently handle high-volume ordering and real-time availability.
+            The platform delivers a fast, reliable experience while supporting
+            complex transaction flows and operational scaling.
+          </p>
+          <div class="image">
+            <img
+              src="/src/img/Deliverables.png"
+              width="100%"
+              alt="Beyond8 Ecosystem Screens"
+              style="aspect-ratio: 1330 / 924"
+            />
+          </div>
           <hr />
         </div>
       </section>
@@ -569,7 +620,9 @@
 
       function createBadge(type) {
         const badge = document.createElement("span");
-        badge.className = `badge badge-${type.toLowerCase() === 'organization' ? 'org' : 'personal'}`;
+        badge.className = `badge badge-${
+          type.toLowerCase() === "organization" ? "org" : "personal"
+        }`;
         badge.innerText = type;
         return badge;
       }
