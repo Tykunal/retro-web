@@ -422,3 +422,25 @@ nav.active .dropdown-menu {
   font-size: 0.9em;
   opacity: 0.9;
 }
+
+.badge {
+  font-size: 0.9em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  border: 1px dashed var(--color);
+}
+
+.badge-org {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.badge-personal {
+  color: #1dd1a1;
+  border-color: #1dd1a1;
+}

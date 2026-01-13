@@ -118,7 +118,7 @@
         <a href="#home" onclick="closeMenu()">Home</a>
         <a href="#aboutMe" onclick="closeMenu()">About</a>
         <div class="nav-dropdown">
-          <div style="display: flex; align-items: center; gap: 5px;">
+          <div style="display: flex; align-items: center; gap: 5px">
             <a href="#projects" onclick="closeMenu()">Projects</a>
             <span
               onclick="event.stopPropagation(); toggleProjectDropdown()"
@@ -142,7 +142,11 @@
           </div>
         </div>
         <a href="#contact" onclick="closeMenu()">Contact</a>
-        <a href="https://drive.google.com/file/d/1nh5GCk9ANFc6E8CcMBlNKyoOd_vAGgkF/view?usp=sharing" onclick="closeMenu()">Resume</a>
+        <a
+          href="https://drive.google.com/file/d/1nh5GCk9ANFc6E8CcMBlNKyoOd_vAGgkF/view?usp=sharing"
+          onclick="closeMenu()"
+          >Resume</a
+        >
       </div>
 
       <div id="tip-scroll">Scroll &#8595;</div>
@@ -152,9 +156,10 @@
       <section>
         <h1 id="aboutMe">Hi there</h1>
         <p>
-          My name is Kunal Tyagi, I’m a Full stack software
-          developer (Web/ Android/ iOS) and digital designer. I have a passion for all things technology and design, from
-          software engineering & machine learning to UI/UX & 3D graphics.
+          My name is Kunal Tyagi, I’m a Full stack software developer (Web/
+          Android/ iOS) and digital designer. I have a passion for all things
+          technology and design, from software engineering & machine learning to
+          UI/UX & 3D graphics.
         </p>
         <p>
           I love diving into algorithms and solving tricky challenges just as
@@ -169,165 +174,214 @@
 
       <section>
         <h1 id="projects">Projects</h1>
-        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
-          <button id="btn-web" class="btn" onclick="switchProjectTab('web')" style="text-decoration: underline; font-weight: bold;">Web Dev</button>
-          <button id="btn-mobile" class="btn" onclick="switchProjectTab('mobile')">Mobile Dev</button>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+          "
+        >
+          <button
+            id="btn-web"
+            class="btn"
+            onclick="switchProjectTab('web')"
+            style="text-decoration: underline; font-weight: bold"
+          >
+            Web Dev
+          </button>
+          <button
+            id="btn-mobile"
+            class="btn"
+            onclick="switchProjectTab('mobile')"
+          >
+            Mobile Dev
+          </button>
         </div>
         <div id="projects-web">
-        <hr />
-        <h2>Learnify</h2>
-        <h3>2025-26</h3>
-        <ul class="skills">
-          <li>Next.js</li>
-          <li>TypeScript</li>
-          <li>Socket.io</li>
-          <li>Mongodb</li>
-          <li>NextAuth v5</li>
-          <li>Web Dev</li>
-        </ul>
-        <p>
-          Learnify is a standout project I developed during my internship at
-          MangosOrange Group. It’s a comprehensive platform that empowers users
-          to purchase courses and earn rewards upon successfully completing
-          them. The platform enhances learning engagement by incorporating
-          assignments and coding tests for skill development.
-        </p>
-        <!-- <p><a href="https://github.com/tykunal/learnify">Learnify</a></p> -->
-        <br />
-        <div class="image">
-          <img
-            src="/src/img/LearnifyImg.png"
-            width="100%"
-            alt="Learnify Screenshot"
-            loading="lazy"
-            style="aspect-ratio: 2443 / 1576"
-          />
-        </div>
-        <hr />
-        <h2>Connectify</h2>
-        <h3>2024</h3>
-        <ul class="skills">
-          <li>MERN</li>
-          <li>Redux</li>
-          <li>Chakra Ui</li>
-          <li>Socket.io</li>
-          <li>Web Dev</li>
-        </ul>
-        <p>
-          A social networking platform designed to foster meaningful connections
-          and enhance community engagement. Users can interact seamlessly
-          through Real-time Messaging, Personalized Feed, Post liking ,
-          commenting, sharing etc.
-        </p>
-        <p><a href="https://connectify-0vxo.onrender.com/">Connectify</a></p>
-        <div class="image">
-          <img
-            src="/src/img/ConnectifyImg.png"
-            width="100%"
-            alt="Connectify Screenshot"
-            loading="lazy"
-            style="aspect-ratio: 2443 / 1576"
-          />
-        </div>
-        <hr />
+          <hr />
+          <h2>Learnify</h2>
+          <h3>2025-26</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-org">Organization</span></div>
+          <ul class="skills">
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>Socket.io</li>
+            <li>Mongodb</li>
+            <li>NextAuth v5</li>
+            <li>Razorpay</li>
+            <li>Web Dev</li>
+          </ul>
+          <p>
+            Learnify is a standout project I developed during my internship at
+            MangosOrange Group. It’s a comprehensive platform that empowers
+            users to purchase courses and earn rewards upon successfully
+            completing them. The platform enhances learning engagement by
+            incorporating assignments and coding tests for skill development.
+          </p>
+          <!-- <p><a href="https://github.com/tykunal/learnify">Learnify</a></p> -->
+          <br />
+          <div class="image">
+            <img
+              src="/src/img/LearnifyImg.png"
+              width="100%"
+              alt="Learnify Screenshot"
+              loading="lazy"
+              style="aspect-ratio: 2443 / 1576"
+            />
+          </div>
+          <hr />
+          <h2>Connectify</h2>
+          <h3>2024</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <ul class="skills">
+            <li>MERN</li>
+            <li>Redux</li>
+            <li>Chakra Ui</li>
+            <li>Socket.io</li>
+            <li>Web Dev</li>
+          </ul>
+          <p>
+            A social networking platform designed to foster meaningful
+            connections and enhance community engagement. Users can interact
+            seamlessly through Real-time Messaging, Personalized Feed, Post
+            liking , commenting, sharing etc.
+          </p>
+          <p><a href="https://connectify-0vxo.onrender.com/">Connectify</a></p>
+          <div class="image">
+            <img
+              src="/src/img/ConnectifyImg.png"
+              width="100%"
+              alt="Connectify Screenshot"
+              loading="lazy"
+              style="aspect-ratio: 2443 / 1576"
+            />
+          </div>
+          <hr />
 
-        <h2>Threejs works</h2>
-        <h3>2025</h3>
-        <ul class="skills">
-          <li>Threejs</li>
-          <li>Design</li>
-          <li>3D modeling</li>
-          <li>UI/UX</li>
-          <li>Web Dev</li>
-        </ul>
-        <p>
-          Most recently, during my semester break, I delved into the fascinating
-          world of 3D modeling and explored the capabilities of Three.js.
-          Leveraging this powerful library, I developed interactive 3D elements
-          and seamlessly integrated them into websites, enhancing user
-          engagement and visual appeal. This experience allowed me to deepen my
-          understanding of 3D graphics and their applications in modern web
-          development.
-        </p>
-        <div class="image">
-          <video width="100%" controls loop autoplay muted playsinline>
-            <source src="/src/img/threejsWorksVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <hr />
+          <h2>Threejs works</h2>
+          <h3>2025</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <ul class="skills">
+            <li>Threejs</li>
+            <li>Design</li>
+            <li>3D modeling</li>
+            <li>UI/UX</li>
+            <li>Web Dev</li>
+          </ul>
+          <p>
+            Most recently, during my semester break, I delved into the
+            fascinating world of 3D modeling and explored the capabilities of
+            Three.js. Leveraging this powerful library, I developed interactive
+            3D elements and seamlessly integrated them into websites, enhancing
+            user engagement and visual appeal. This experience allowed me to
+            deepen my understanding of 3D graphics and their applications in
+            modern web development.
+          </p>
+          <div class="image">
+            <video width="100%" controls loop autoplay muted playsinline>
+              <source src="/src/img/threejsWorksVideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <hr />
 
-        <h2>Help Desk</h2>
-        <h3>2024</h3>
-        <ul class="skills">
-          <li>Flask</li>
-          <li>Python</li>
-          <li>Mongodb</li>
-          <li>Machine Learning</li>
-          <li>Freelance</li>
-          <li>Web Dev</li>
-        </ul>
-        <p>An Intelligent Query-Handling Bot.</p>
-        <p>
-          This intelligent bot streamlines query handling by identifying users
-          and their messages, classifying problems, and providing instant
-          solutions using the Bag of Words technique. If no solution exists, it
-          raises a ticket, provides a ticket number, and allows users to check
-          its status. Additionally, an admin panel, accessible with a specific
-          user ID, enables seamless ticket management for administrators.
-        </p>
-        <!-- <button
+          <h2>Help Desk</h2>
+          <h3>2024</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <ul class="skills">
+            <li>Flask</li>
+            <li>Python</li>
+            <li>Mongodb</li>
+            <li>Machine Learning</li>
+            <li>Freelance</li>
+            <li>Web Dev</li>
+          </ul>
+          <p>An Intelligent Query-Handling Bot.</p>
+          <p>
+            This intelligent bot streamlines query handling by identifying users
+            and their messages, classifying problems, and providing instant
+            solutions using the Bag of Words technique. If no solution exists,
+            it raises a ticket, provides a ticket number, and allows users to
+            check its status. Additionally, an admin panel, accessible with a
+            specific user ID, enables seamless ticket management for
+            administrators.
+          </p>
+          <!-- <button
           class="collapse-btn btn"
           collapsed="true"
           onclick="this.setAttribute('collapsed', this.getAttribute('collapsed') === 'true'? 'false' : 'true')"
         >
           more...
         </button> -->
-        <br />
+          <br />
 
-        <div class="image">
-          <img
-            src="/src/img/HelpDeskImg.png"
-            width="100%"
-            alt="HelpDesk screenshot"
-            style="aspect-ratio: 1330 / 924"
-          />
-        </div>
-        <hr />
-
-        <h2>Cyberfiction</h2>
-        <h3>2024</h3>
-        <ul class="skills">
-          <li>Html, Css, Js</li>
-          <li>Gsap</li>
-          <li>Locomotive</li>
-          <li>Canvas</li>
-          <li>3D Animation</li>
-        </ul>
-        <p>
-          While learning advanced web animations, I designed and developed an
-          interactive website that integrates modern animation libraries like
-          GSAP and Locomotive Scroll. The project features smooth scrolling,
-          dynamic text animations, and responsive layouts, showcasing creative
-          transitions and user engagement.
-        </p>
-        <div class="image">
-          <video width="100%" controls loop autoplay muted playsinline>
-            <source src="/src/img/CyberFictionEdited.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <hr />
-        </div>
-        <div id="projects-mobile" style="display: none;">
+          <div class="image">
+            <img
+              src="/src/img/HelpDeskImg.png"
+              width="100%"
+              alt="HelpDesk screenshot"
+              style="aspect-ratio: 1330 / 924"
+            />
+          </div>
           <hr />
-          <h2>Mobile App Project</h2>
+
+          <h2>Cyberfiction</h2>
+          <h3>2024</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-personal">Personal</span></div>
+          <ul class="skills">
+            <li>Html, Css, Js</li>
+            <li>Gsap</li>
+            <li>Locomotive</li>
+            <li>Canvas</li>
+            <li>3D Animation</li>
+          </ul>
+          <p>
+            While learning advanced web animations, I designed and developed an
+            interactive website that integrates modern animation libraries like
+            GSAP and Locomotive Scroll. The project features smooth scrolling,
+            dynamic text animations, and responsive layouts, showcasing creative
+            transitions and user engagement.
+          </p>
+          <div class="image">
+            <video width="100%" controls loop autoplay muted playsinline>
+              <source src="/src/img/CyberFictionEdited.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <hr />
+        </div>
+        <div id="projects-mobile" style="display: none">
+          <hr />
+          <h2>Beyond8 EcoSystem</h2>
           <h3>2025</h3>
+          <div style="margin-bottom: 10px"><span class="badge badge-org">Organization</span></div>
           <ul class="skills">
             <li>React Native</li>
-            <li>Firebase</li>
+            <li>FCM</li>
+            <li>APN</li>
+            <li>Sentry</li>
+            <li>Stripe</li>
+            <li>Postgres</li>
           </ul>
-          <p>More mobile projects coming soon.</p>
+          <p>
+            Built and delivered a cross-platform React Native mobile app while
+            working as a Full Stack Developer at Beyond8. The app is used daily
+            by 1k+ learners, facilitators, and parents, alongside a smart
+            scheduling system for managing classes, sessions, and room
+            allocations. Implemented role-based dashboards, intelligent
+            attendance workflows, and automated reporting—reducing manual
+            tracking time by 60%+.
+          </p>
+          <p>
+            Integrated Expo push notifications using FCM and APNs, a global
+            error-handling system with Sentry, and advanced features like AWS
+            Transcribe, AWS Textract, and Stripe payments supporting complex
+            flows (failures, retries, refunds, webhooks). Developed custom
+            Directus extensions and a conflict-detection engine for scheduling,
+            while collaborating closely with cross-functional teams and
+            contributing 70+ production code commits.
+          </p>
           <hr />
         </div>
       </section>
@@ -449,7 +503,10 @@
             },
             function (error) {
               console.log("Failed to send email.", error);
-              showMessage("Failed to send message. Please connect with me on LinkedIn", "error");
+              showMessage(
+                "Failed to send message. Please connect with me on LinkedIn",
+                "error"
+              );
             }
           );
       }
@@ -506,7 +563,15 @@
 
       function toggleProjectDropdown() {
         const dropdown = document.getElementById("project-dropdown");
-        dropdown.style.display = dropdown.style.display === "none" ? "flex" : "none";
+        dropdown.style.display =
+          dropdown.style.display === "none" ? "flex" : "none";
+      }
+
+      function createBadge(type) {
+        const badge = document.createElement("span");
+        badge.className = `badge badge-${type.toLowerCase() === 'organization' ? 'org' : 'personal'}`;
+        badge.innerText = type;
+        return badge;
       }
     </script>
     <script
