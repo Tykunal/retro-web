@@ -146,6 +146,11 @@
 
       <section>
         <h1 id="projects">Projects</h1>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+          <button id="btn-web" class="btn" onclick="switchProjectTab('web')" style="text-decoration: underline; font-weight: bold;">Web Dev</button>
+          <button id="btn-mobile" class="btn" onclick="switchProjectTab('mobile')">Mobile Dev</button>
+        </div>
+        <div id="projects-web">
         <hr />
         <h2>Learnify</h2>
         <h3>2025-26</h3>
@@ -290,6 +295,18 @@
           </video>
         </div>
         <hr />
+        </div>
+        <div id="projects-mobile" style="display: none;">
+          <hr />
+          <h2>Mobile App Project</h2>
+          <h3>2025</h3>
+          <ul class="skills">
+            <li>React Native</li>
+            <li>Firebase</li>
+          </ul>
+          <p>More mobile projects coming soon.</p>
+          <hr />
+        </div>
       </section>
 
       <section>
@@ -438,6 +455,29 @@
           nav.classList.remove(["active"]);
         } else {
           nav.classList.add("active");
+        }
+      }
+
+      function switchProjectTab(tab) {
+        const webProjects = document.getElementById("projects-web");
+        const mobileProjects = document.getElementById("projects-mobile");
+        const btnWeb = document.getElementById("btn-web");
+        const btnMobile = document.getElementById("btn-mobile");
+
+        if (tab === "web") {
+          webProjects.style.display = "block";
+          mobileProjects.style.display = "none";
+          btnWeb.style.textDecoration = "underline";
+          btnWeb.style.fontWeight = "bold";
+          btnMobile.style.textDecoration = "none";
+          btnMobile.style.fontWeight = "normal";
+        } else {
+          webProjects.style.display = "none";
+          mobileProjects.style.display = "block";
+          btnWeb.style.textDecoration = "none";
+          btnWeb.style.fontWeight = "normal";
+          btnMobile.style.textDecoration = "underline";
+          btnMobile.style.fontWeight = "bold";
         }
       }
     </script>
