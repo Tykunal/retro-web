@@ -352,7 +352,7 @@ a:active {
   top: 10px;
   right: 10px;
   padding: 10px 15px;
-  background-color: #4CAF50; /* Success Green */
+  background-color: #4caf50; /* Success Green */
   color: white;
   font-size: 16px;
   border-radius: 5px;
@@ -366,13 +366,56 @@ a:active {
 }
 
 .error {
-  background-color: #F44336; /* Error Red */
+  background-color: #f44336; /* Error Red */
 }
 
 .info {
-  background-color: #2196F3; /* Info Blue */
+  background-color: #2196f3; /* Info Blue */
 }
 
 .warning {
-  background-color: #FF9800; /* Warning Orange */
+  background-color: #ff9800; /* Warning Orange */
+}
+
+/* Wrapper */
+.nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Projects row */
+.nav-dropdown > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dropdown itself */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  padding-left: 16px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Show dropdown */
+.dropdown-menu.active {
+  display: flex;
+}
+
+/* Mobile fix */
+nav.active .dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  align-self: flex-start;
+  width: auto;
+  font-size: 0.9em;
+  opacity: 0.9;
 }

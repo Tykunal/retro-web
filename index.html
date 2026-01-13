@@ -117,7 +117,30 @@
       <div class="menu-body" onclick="closeMenu()">
         <a href="#home" onclick="closeMenu()">Home</a>
         <a href="#aboutMe" onclick="closeMenu()">About</a>
-        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <div class="nav-dropdown">
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <span
+              onclick="event.stopPropagation(); toggleProjectDropdown()"
+              style="cursor: pointer; font-size: 0.8em"
+              >▼</span
+            >
+          </div>
+          <div id="project-dropdown" class="dropdown-menu">
+            <a
+              href="#projects"
+              onclick="switchProjectTab('web'); closeMenu()"
+              style="font-size: 0.9em; white-space: nowrap"
+              >Web Dev</a
+            >
+            <a
+              href="#projects"
+              onclick="switchProjectTab('mobile'); closeMenu()"
+              style="font-size: 0.9em; white-space: nowrap"
+              >Mobile Dev</a
+            >
+          </div>
+        </div>
         <a href="#contact" onclick="closeMenu()">Contact</a>
         <a href="https://drive.google.com/file/d/1nh5GCk9ANFc6E8CcMBlNKyoOd_vAGgkF/view?usp=sharing" onclick="closeMenu()">Resume</a>
       </div>
@@ -227,7 +250,7 @@
           development.
         </p>
         <div class="image">
-          <video width="100%" controls loop autoplay>
+          <video width="100%" controls loop autoplay muted playsinline>
             <source src="/src/img/threejsWorksVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -289,7 +312,7 @@
           transitions and user engagement.
         </p>
         <div class="image">
-          <video width="100%" controls loop autoplay>
+          <video width="100%" controls loop autoplay muted playsinline>
             <source src="/src/img/CyberFictionEdited.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -479,6 +502,11 @@
           btnMobile.style.textDecoration = "underline";
           btnMobile.style.fontWeight = "bold";
         }
+      }
+
+      function toggleProjectDropdown() {
+        const dropdown = document.getElementById("project-dropdown");
+        dropdown.style.display = dropdown.style.display === "none" ? "flex" : "none";
       }
     </script>
     <script
