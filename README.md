@@ -22,7 +22,7 @@ Follow these steps to set up and run the project:
 
 2. **Run the development server at localhost:1234**
    ```bash
-    npm run dev
+    npm run dev 
 
 3. **Build the project for production (outputs to the dist/ directory)**
     ```bash
